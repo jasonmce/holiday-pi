@@ -1,6 +1,10 @@
+#!/bin/bash
+echo Content-type: text/plain
+echo ""
+
 source /var/holiday-pi/cgi-bin/pi-status
 
-lights=$((($lights % 8)+1))
+lights=$((($lights % 7)+1))
 
 echo "lights is "
 echo $lights
