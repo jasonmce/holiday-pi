@@ -17,8 +17,6 @@ if __name__ == "__main__":
         pifacedigital.leds[0].toggle()
       if (2 & lights):
         pifacedigital.leds[1].toggle()
-      if (4 & lights):
-        pifacedigital.leds[5].toggle()
 
       if ('on' == effect):
         sleep(10000)
