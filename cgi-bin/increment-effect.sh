@@ -4,12 +4,22 @@ echo ""
 
 source /var/holiday-pi/cgi-bin/pi-status
 
-#lights=$((($lights % 7)+1))
-lights=$((($lights % 3)+1))
+case $effect in
+  on)
+    effect='slow'
+    ;;
+  slow)
+    effect='fast'
+    ;;
+  *)
+    effect='on'
+    ;;
+
+esac
 
 
-echo "lights is "
-echo $lights
+echo "effect is "
+echo $effect
 
 echo "lights=$lights;effect=$effect" > /var/holiday-pi/cgi-bin/pi-status
 

@@ -14,12 +14,14 @@ if __name__ == "__main__":
 
     while True:
       if (1 & lights):
-        pifacedigital.leds[7].toggle()
+        pifacedigital.leds[0].toggle()
       if (2 & lights):
-        pifacedigital.leds[6].toggle()
+        pifacedigital.leds[1].toggle()
       if (4 & lights):
         pifacedigital.leds[5].toggle()
 
+      if ('on' == effect):
+        sleep(10000)
       if ('slow' == effect):
         sleep(1.0)
       if ('fast' == effect):
