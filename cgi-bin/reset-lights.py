@@ -13,13 +13,16 @@ if __name__ == "__main__":
     pifacedigital.output_port.all_off()
 
     while True:
-      if (1 & lights):
+#      if (1 & lights):
+      if ((0 == (1 & lights)) or (0 != lights)):
         pifacedigital.leds[0].toggle()
+        print('light 0 is on')
       if (2 & lights):
         pifacedigital.leds[1].toggle()
+        print('light 1 is on')
 
       if ('on' == effect):
-        sleep(10000)
+        break
       if ('slow' == effect):
         sleep(1.0)
       if ('fast' == effect):
